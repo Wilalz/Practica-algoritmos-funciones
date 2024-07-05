@@ -4,11 +4,11 @@ Proyecto creado desde el programa educativo ONE - Oracle Next Education creado p
 El desarrollo es con HTML, CSS y JavaScript.
 
 ## Ver la presentación!
-[Web -> Botones con funciones](https://www.linkedin.com/in/wilson-alzate-pineda/)
+[Web -> Botones con funciones](https://wilalz.github.io/js-curso-2-Oracle-ONE/)
   
 
 <!-- imagen -->
-![app](https://www.linkedin.com/in/wilson-alzate-pineda/)
+![app](https://github.com/Wilalz/js-curso-2-Oracle-ONE/blob/63695ca7967027e2d52e43ecb47ab3e1f3de3895/Funciones%20en%20botones.jpg)
 
 ## Instalación
 1. Clona o descarga el repósitorio.\
