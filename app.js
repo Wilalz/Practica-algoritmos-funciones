@@ -165,3 +165,152 @@ function tablaMultiplicar() {
         ${resultados[9]}\n`    
     )
 }
+
+
+
+// Crea una lista de lenguajes de programación llamada "lenguagesDeProgramacion con los siguientes elementos: 'JavaScript', 'C', 'C++', 'Kotlin' y 'Python'.
+let lenguagesDeProgramacion = ['JavaScript', 'Python', 'Java'];
+
+// Agrega a la lista "lenguagesDeProgramacion los siguientes elementos: 'Java', 'Ruby' y 'GoLang'.
+lenguagesDeProgramacion.push('C#');
+lenguagesDeProgramacion.push('PHP');
+
+// Crea una función que muestre en la consola todos los elementos de la lista "lenguagesDeProgramacion.
+function mostrarLengujesDeProgramacion(){
+    alert(`Los lenguajes mas usados en 2023 son:
+        1. ${lenguagesDeProgramacion[0]}
+        2. ${lenguagesDeProgramacion[1]}
+        3. ${lenguagesDeProgramacion[2]}
+        4. ${lenguagesDeProgramacion[3]}
+        5. ${lenguagesDeProgramacion[4]}`
+    )
+}
+// Crea una función que muestre en la consola todos los elementos de la lista "lenguagesDeProgramacion en orden inverso.
+function invertirOrdenLista (lista) {
+    let mensaje = '';
+    for (let i = lista.length; i>0; i--){
+        mensaje += '\n' + i + `. ` + lista[i-1];
+    }
+    return mensaje
+
+}
+function mostrarListaInvertida () {
+    alert(`Lenguajes mas usados en 2023 (orden invertido) ${invertirOrdenLista(lenguagesDeProgramacion)}`)
+}
+
+// Crea una función que calcule el promedio de los elementos en una lista de números.
+function promediar () {
+    let arrayNumeros = []
+    let cantidadNumeros = parseInt(prompt(`Vamos a promediar varios numeros\n¿Cuantos numeros quieres promediar?`))
+    let sumaTotal = 0;
+    let promedio = 0;
+    for (let i = 0; i < cantidadNumeros; i++) {
+        arrayNumeros.push(parseInt(prompt(`Ingresa el numero ${i+1}`)));
+    }
+    for (let i = 0; i < arrayNumeros.length; i++) {
+        sumaTotal += arrayNumeros[i];
+    }
+    promedio = sumaTotal/cantidadNumeros;
+    alert(`El promedio es: ${promedio}`)
+}
+
+// Crea una función que muestre en la consola el número más grande y el número más pequeño en una lista.
+function minimoMaximo() {
+    let arrayNumeros = [];
+    for (let i = 0; i < 5; i++) {
+        arrayNumeros.push(parseInt(prompt(`Ingresa 5 numeros para identificar el mayor y el menor de todos\nIngresa el numero ${i+1}:`)));
+    }
+    arrayNumeros.sort((a, b) => a - b);
+    alert(`El numero minimo es: ${arrayNumeros[0]}\nEl numero maximo es: ${arrayNumeros[arrayNumeros.length-1]}`)
+}
+
+// Crea una función que devuelva la suma de todos los elementos en una lista.
+function sumarLista() {
+    let arrayNumeros = [];
+    let total = 0;
+    for (let i = 0; i < 5; i++) {
+        arrayNumeros.push(parseInt(prompt(`Ingresa 5 numeros para sumarlos\nIngresa el numero ${i+1}:`)));
+    }
+    for (let i = 0; i < arrayNumeros.length; i++) {
+        total += arrayNumeros[i];
+    }
+    alert(`El total es: ${total}`);
+}
+
+
+// Crea una función que devuelva la posición en la lista donde se encuentra un elemento pasado como parámetro, o -1 si no existe en la lista.
+
+
+let listaAleatoria = [];
+
+function crearLista () {
+    let numeroAleatorio = Math.ceil(Math.random()*10);
+    while(listaAleatoria.length < 10){
+
+        if(listaAleatoria.includes(numeroAleatorio)){
+            // volver a generar el nAleatorio
+            return crearLista();
+        } else {
+            // push al array
+            listaAleatoria.push(numeroAleatorio);
+        }
+    }
+}
+
+function hallarPosicion () {
+    crearLista();
+    let numeroParaBuscar = parseInt(prompt(`Ingresa un numero del 1 al 10 para buscar su posición en la lista`))
+    let posicion;
+    if(listaAleatoria.includes(numeroParaBuscar)){
+        for (let i = 0; i < listaAleatoria.length; i++) {
+            if(numeroParaBuscar === listaAleatoria[i]){
+                posicion = i
+            }
+        }
+        alert(`El numero ${numeroParaBuscar} está en la posición ${posicion} de la lista aleatoria`)
+    } else {
+        alert(`El numero ${numeroParaBuscar} no se encuentra en la lista aleatoria`)
+    }
+}
+
+
+// Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.
+function cuadrado() {
+    let arrayNumeros = [];
+    let arrayCuadrado = [];
+    for (let i = 0; i < 5; i++) {
+        arrayNumeros.push(parseInt(prompt(`Ingresa 5 numeros para hayar su valor al cuadrado\nIngresa el numero ${i+1}:`)));
+    }
+    for (let i = 0; i < arrayNumeros.length; i++) {
+        arrayCuadrado[i] = arrayNumeros[i] * arrayNumeros[i];
+    }
+    alert(`La lista original es: ${arrayNumeros}\nLa lista al cuadrado es: ${arrayCuadrado}`);
+}
+
+function numeroPrimo () {
+    let numero = parseInt(prompt(`Ingresa un número para identificar si es un número primo\nLos numeros primos solo son divisibles por si mismos y por el 1`))
+    if (numero <= 1){
+        alert(`Los numeros negativos o el 1 no son primos`)
+    }
+    for (let i = 2; i < Math.sqrt(numero); i++) {
+        if (numero % i === 0){
+            alert(`El número ${numero} no es primo`)
+        } else {
+            alert(`El número ${numero} es primo`)
+        }
+    }
+}
+
+function esPrimo(numero) {
+    if (numero <= 1) {
+      return false; // Los números negativos y el 1 no son primos
+    }
+    // Comprobamos si el número es divisible por algún otro número
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false; // No es primo
+        }
+    }
+
+    return true; // Es primo
+}
