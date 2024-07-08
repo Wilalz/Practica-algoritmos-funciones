@@ -289,28 +289,20 @@ function cuadrado() {
 
 function numeroPrimo () {
     let numero = parseInt(prompt(`Ingresa un número para identificar si es un número primo\nLos numeros primos solo son divisibles por si mismos y por el 1`))
+    let primoTexto = '';
     if (numero <= 1){
-        alert(`Los numeros negativos o el 1 no son primos`)
-    }
-    for (let i = 2; i < Math.sqrt(numero); i++) {
-        if (numero % i === 0){
-            alert(`El número ${numero} no es primo`)
-        } else {
-            alert(`El número ${numero} es primo`)
-        }
-    }
-}
-
-function esPrimo(numero) {
-    if (numero <= 1) {
-      return false; // Los números negativos y el 1 no son primos
-    }
-    // Comprobamos si el número es divisible por algún otro número
-    for (let i = 2; i <= Math.sqrt(numero); i++) {
-        if (numero % i === 0) {
-            return false; // No es primo
-        }
-    }
-
-    return true; // Es primo
+        primoTexto = 'no es primo';
+        } else if (numero === 2 || numero === 3){
+            primoTexto = 'es primo';
+            } else {
+                for (let i = 2; i < numero; i++) {
+                    if (numero % i !== 0){
+                        primoTexto = 'es primo';
+                    } else {
+                        primoTexto = 'no es primo';
+                        break                       
+                    }
+                }
+            }
+    alert(`El número ${numero} ${primoTexto}`)
 }
