@@ -8,7 +8,7 @@ El desarrollo es con HTML, CSS y JavaScript.
   
 
 <!-- imagen -->
-![app](https://github.com/Wilalz/js-curso-2-Oracle-ONE/blob/743cc8231c57a6d42ac29d16fe503b635d4aacd0/Funciones%20en%20botones.jpg)
+![app](https://github.com/Wilalz/js-curso-2-Oracle-ONE/blob/260d9bd66ba491ff6ed654102243081ee832b7ea/Funciones%20en%20botones.jpg)
 
 ## Instalación
 1. Clona o descarga el repósitorio.
