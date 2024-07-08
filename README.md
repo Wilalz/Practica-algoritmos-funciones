@@ -4,7 +4,7 @@ Proyecto creado desde el programa educativo ONE - Oracle Next Education creado p
 El desarrollo es con HTML, CSS y JavaScript.    
 
 ## Ver la presentación!
-[Web -> Práctica con algoritmos y funciones](https://wilalz.github.io/js-curso-2-Oracle-ONE/)
+[Web -> Práctica con algoritmos y funciones](https://wilalz.github.io/Practica-algoritmos-funciones/)
   
 
 <!-- imagen -->
